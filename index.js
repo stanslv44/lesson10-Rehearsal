@@ -1,4 +1,5 @@
 AOS.init();
+
 var swiper = new Swiper(".swiper", {
   // Направление
   direction: "horizontal",
@@ -15,14 +16,18 @@ var swiper = new Swiper(".swiper", {
   scrollbar: { el: ".swiper-scrollbar" },
 
   // Расстояние между слайдами
-  spaceBetween: 20,
+  spaceBetween: 50,
 
   // Количество слайдов в одной странице
-  slidesPerView: 3,
+  slidesPerView: 4,
 
   // Кнопки навигации
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+
+document.getElementById("input").addEventListener("input", () => {
+  console.log(document.getElementById("input").value);
 });
